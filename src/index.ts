@@ -9,7 +9,7 @@ config();
 
 const bot = mineflayer.createBot({
   host: process.env.HOST || 'localhost',
-  username: process.env.USERNAME || 'Bot',
+  username: process.env.BOT_USERNAME || 'Bot',
   auth: 'offline',
   port: process.env.PORT ? Number.parseInt(process.env.PORT) : 25565
 });
@@ -31,7 +31,7 @@ async function loadEvents() {
     const folderPath = path.join(eventsPath, folder);
     if (!fs.lstatSync(folderPath).isDirectory()) continue;
 
-    const eventFiles = fs.readdirSync(folderPath).filter(f => f.endsWith('.js') || f.endsWith('.ts'));
+    const eventFiles = fs.readdirSync(folderPath).filter(f => f.endsWith('.js'));
     const eventName = folder;
 
     for (const file of eventFiles) {
