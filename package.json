@@ -1,0 +1,25 @@
+{
+  "name": "minebot",
+  "version": "1.0.0",
+  "description": "Minecraftのための多機能Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SharkBot-Game-Dev/MineBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/SharkBot-Game-Dev/MineBot/issues"
+  },
+  "homepage": "https://github.com/SharkBot-Game-Dev/MineBot#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "mineflayer": "^4.37.1"
+  }
+}

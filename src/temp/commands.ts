@@ -1,0 +1,1 @@
+export var commands: Record<string, any> = {};
