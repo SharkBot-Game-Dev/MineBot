@@ -4,6 +4,7 @@ import path from "path";
 import fs from "fs";
 import { fileURLToPath, pathToFileURL } from "url";
 import { commands } from "./temp/commands.js";
+import { pathfinder } from "mineflayer-pathfinder";
 
 config();
 
@@ -13,6 +14,8 @@ const bot = mineflayer.createBot({
   auth: 'offline',
   port: process.env.PORT ? Number.parseInt(process.env.PORT) : 25565
 });
+
+bot.loadPlugin(pathfinder);
 
 async function loadEvents() {
   const __filename = fileURLToPath(import.meta.url);
